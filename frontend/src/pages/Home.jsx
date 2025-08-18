@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { FaWater, FaIndustry, FaRecycle, FaCheckCircle, FaArrowRight } from "react-icons/fa"
 import { getHomeContent } from "../services/api"
+import {Link} from "react-router-dom"
 
 const Home = () => {
   const [homeData, setHomeData] = useState(null)
@@ -59,18 +60,18 @@ const Home = () => {
               {homeData?.hero?.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/projects-services"
+              <Link
+                to="/projects-&-services"
                 className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center shadow-md hover:shadow-lg"
               >
                 Our Services <FaArrowRight className="ml-2" />
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact-us"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors shadow-md hover:shadow-lg"
               >
                 Get Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -133,12 +134,12 @@ const Home = () => {
           <p className="text-xl mb-8 text-purple-100">
             Contact us today for a free consultation and custom solution design
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact-us"
             className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center shadow-md hover:shadow-lg"
           >
             Contact Us Now <FaArrowRight className="ml-2" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>
