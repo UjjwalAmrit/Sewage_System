@@ -24,7 +24,7 @@ api.interceptors.request.use(
 // Response interceptor
 api.interceptors.response.use(
   (response) => {
-    return response.data
+    return response
   },
   (error) => {
     console.error("API Error:", error.response?.data || error.message)
@@ -45,7 +45,7 @@ export const getAboutContent = async () => {
 
 export const getProjectsServices = async () => {
   const response = await api.get("/projects-services")
-  return response.data
+  return response.data.data
 }
 
 export default api

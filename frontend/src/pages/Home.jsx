@@ -11,8 +11,8 @@ const Home = () => {
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
-        const data = await getHomeContent()
-        setHomeData(data)
+        const result = await getHomeContent()
+        setHomeData(result.data)
       } catch (error) {
         console.error("Error fetching home data:", error)
       } finally {

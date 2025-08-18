@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { FaBars, FaTimes, FaWater } from "react-icons/fa"
+import { Link } from "react-router-dom"
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -38,15 +40,15 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               {["Home", "About Us", "Projects & Services", "Contact Us"].map((item) => (
-                <a
+                <Link
                   key={item}
-                  href={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  to={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
                   className="relative text-sm font-medium text-white/80 hover:text-purple-200 transition-colors group"
                 >
                   {item}
                   {/* Underline animation */}
                   <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -68,13 +70,13 @@ const Navbar = () => {
         <div className="md:hidden bg-gradient-to-r from-purple-900/90 via-indigo-900/85 to-purple-800/90 backdrop-blur-lg border-t border-white/20">
           <div className="px-4 pt-4 pb-6 space-y-2">
             {["Home", "About Us", "Projects & Services", "Contact Us"].map((item) => (
-              <a
+              <Link
                 key={item}
-                href={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                to={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
                 className="block px-3 py-2 rounded-md text-base font-medium text-white/80 hover:bg-purple-700/40 hover:text-purple-200 transition"
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

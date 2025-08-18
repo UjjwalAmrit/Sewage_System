@@ -11,8 +11,8 @@ const AboutUs = () => {
   useEffect(() => {
     const fetchAboutData = async () => {
       try {
-        const data = await getAboutContent()
-        setAboutData(data)
+        const result = await getAboutContent()
+        setAboutData(result?.data || result)
       } catch (error) {
         console.error("Error fetching about data:", error)
       } finally {

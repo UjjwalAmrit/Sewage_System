@@ -5,6 +5,6 @@ export const submitContactForm = async (formData) => {
     const response = await api.post("/contact/submit", formData)
     return response
   } catch (error) {
-    throw new Error(error.message || "Failed to submit contact form")
+    throw new Error(error.response?.data?.message || "Failed to submit contact form")
   }
 }
