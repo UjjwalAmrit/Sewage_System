@@ -1,0 +1,188 @@
+/* @import "tw-animate-css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Debales.ai inspired purple-blue gradient palette */
+  --background: oklch(0.99 0.01 270);
+  --foreground: oklch(0.18 0.05 270);
+  --card: rgba(255, 255, 255, 0.1);
+  --card-foreground: oklch(0.18 0.05 270);
+  --popover: rgba(255, 255, 255, 0.12);
+  --popover-foreground: oklch(0.18 0.05 270);
+
+  --primary: oklch(0.55 0.25 280); /* violet */
+  --primary-foreground: oklch(0.98 0.01 270);
+  --secondary: oklch(0.72 0.2 250); /* bluish */
+  --secondary-foreground: oklch(0.98 0.01 270);
+
+  --muted: rgba(255, 255, 255, 0.2);
+  --muted-foreground: oklch(0.6 0.05 270);
+  --accent: rgba(255, 255, 255, 0.25);
+  --accent-foreground: oklch(0.98 0.01 270);
+
+  --destructive: oklch(0.62 0.24 25.723);
+  --destructive-foreground: oklch(0.96 0.1 25.331);
+
+  --border: rgba(255, 255, 255, 0.2);
+  --input: rgba(255, 255, 255, 0.2);
+  --ring: rgba(255, 255, 255, 0.3);
+
+  --chart-1: oklch(0.65 0.25 280);
+  --chart-2: oklch(0.6 0.2 240);
+  --chart-3: oklch(0.45 0.18 200);
+  --chart-4: oklch(0.78 0.25 300);
+  --chart-5: oklch(0.7 0.22 330);
+
+  --radius: 0.75rem;
+
+  /* Sidebar */
+  --sidebar: rgba(20, 20, 40, 0.6);
+  --sidebar-foreground: oklch(0.98 0.01 270);
+  --sidebar-primary: oklch(0.6 0.25 280);
+  --sidebar-primary-foreground: oklch(0.98 0.01 270);
+  --sidebar-accent: rgba(255, 255, 255, 0.15);
+  --sidebar-accent-foreground: oklch(0.98 0.01 270);
+  --sidebar-border: rgba(255, 255, 255, 0.15);
+  --sidebar-ring: rgba(255, 255, 255, 0.3);
+}
+
+.dark {
+  --background: rgba(10, 10, 25, 0.85);
+  --foreground: oklch(0.96 0.02 280);
+  --card: rgba(20, 20, 40, 0.65);
+  --card-foreground: oklch(0.96 0.02 280);
+  --popover: rgba(20, 20, 40, 0.65);
+  --popover-foreground: oklch(0.96 0.02 280);
+
+  --primary: oklch(0.7 0.25 280);
+  --primary-foreground: oklch(0.18 0.05 270);
+  --secondary: oklch(0.55 0.2 250);
+  --secondary-foreground: oklch(0.96 0.02 280);
+
+  --muted: rgba(255, 255, 255, 0.15);
+  --muted-foreground: oklch(0.65 0.05 270);
+  --accent: rgba(255, 255, 255, 0.2);
+  --accent-foreground: oklch(0.96 0.02 280);
+
+  --destructive: oklch(0.55 0.2 25.723);
+  --destructive-foreground: oklch(0.95 0.1 25.331);
+
+  --border: rgba(255, 255, 255, 0.12);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: rgba(255, 255, 255, 0.25);
+
+  --sidebar: rgba(15, 15, 30, 0.6);
+  --sidebar-foreground: oklch(0.96 0.02 280);
+  --sidebar-primary: oklch(0.65 0.25 280);
+  --sidebar-primary-foreground: oklch(0.98 0.01 270);
+  --sidebar-accent: rgba(255, 255, 255, 0.15);
+  --sidebar-accent-foreground: oklch(0.96 0.02 280);
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(255, 255, 255, 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, rgba(30, 0, 60, 0.8), rgba(10, 10, 25, 0.9));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+      "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-semibold transition-colors;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--primary-foreground);
+    box-shadow: 0 8px 25px rgba(120, 90, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 12px 30px rgba(120, 90, 255, 0.6);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-semibold transition-colors border-2;
+    border-color: var(--secondary);
+    color: var(--secondary-foreground);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+  }
+
+  .card-glass {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  }
+}
