@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react"
 import { FaWater, FaIndustry, FaRecycle, FaCheckCircle, FaArrowRight } from "react-icons/fa"
 import { getHomeContent } from "../services/api"
-import {Link} from "react-router-dom"
+ import { motion } from "framer-motion"
+
 
 const Home = () => {
   const [homeData, setHomeData] = useState(null)
@@ -48,59 +49,71 @@ const Home = () => {
   return (
     <div className="min-h-screen font-sans">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-900 to-purple-700 text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg">
-              {homeData?.hero?.title}
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-purple-100 font-medium">{homeData?.hero?.subtitle}</p>
-            <p className="text-lg mb-10 max-w-3xl mx-auto text-purple-50 leading-relaxed">
-              {homeData?.hero?.description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/projects-&-services"
-                className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center shadow-md hover:shadow-lg"
-              >
-                Our Services <FaArrowRight className="ml-2" />
-              </Link>
-              <Link
-                to="/contact-us"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors shadow-md hover:shadow-lg"
-              >
-                Get Quote
-              </Link>
-            </div>
+    <section className="relative text-white py-20 overflow-hidden bg-[url('/home.jpg')] bg-cover bg-center">
+      {/* Subtle dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg">
+            {homeData?.hero?.title}
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-purple-100 font-medium">
+            {homeData?.hero?.subtitle}
+          </p>
+          <p className="text-lg mb-10 max-w-3xl mx-auto text-purple-50 leading-relaxed">
+            {homeData?.hero?.description}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/projects-services"
+              className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center shadow-md hover:shadow-lg"
+            >
+              Our Services <FaArrowRight className="ml-2" />
+            </a>
+            <a
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors shadow-md hover:shadow-lg"
+            >
+              Get Quote
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Core Services</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Comprehensive wastewater treatment solutions for residential, commercial, and industrial applications
-            </p>
-          </div>
+    
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {homeData?.services?.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-1"
-              >
-                <div className="flex justify-center mb-6">{getServiceIcon(service.icon)}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
+{/* Services Section */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-14">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Core Services</h2>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        Comprehensive wastewater treatment solutions for residential, commercial, and industrial applications
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {homeData?.services?.map((service, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="bg-white rounded-xl shadow-md p-8 text-center border border-gray-100"
+        >
+          <div className="flex justify-center mb-6">{getServiceIcon(service.icon)}</div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+          <p className="text-gray-600 leading-relaxed">{service.description}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Technologies Section */}
       <section className="py-20 bg-white">
@@ -134,12 +147,12 @@ const Home = () => {
           <p className="text-xl mb-8 text-purple-100">
             Contact us today for a free consultation and custom solution design
           </p>
-          <Link
-            to="/contact-us"
+          <a
+            href="/contact"
             className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center shadow-md hover:shadow-lg"
           >
             Contact Us Now <FaArrowRight className="ml-2" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>
