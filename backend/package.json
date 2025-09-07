@@ -4,12 +4,13 @@
   "description": "Backend API for Wastewater Treatment Solutions website",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "build-frontend": "cd frontend && npm install && npm run build",
-    "postinstall": "npm run build-frontend",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+   "scripts": {
+  "start": "node src/server.js",
+  "dev": "nodemon src/server.js",
+  "build-frontend": "cd frontend && npm install && npx vite build",
+  "postinstall": "npm run build-frontend",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
