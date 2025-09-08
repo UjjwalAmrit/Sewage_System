@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { FaWater, FaIndustry, FaRecycle } from "react-icons/fa"
 import ProjectCard from "../components/ProjectCard"
 import { getProjectsServices } from "../services/api"
 
@@ -33,43 +32,37 @@ const ProjectsServices = () => {
     )
   }
 
- const getServiceImage = (id) => {
-  let src = "/STP.jpg"
-  if (id === 2) src = "/ETP.jpg"
-  if (id === 3) src = "/ATP.jpg"
+  const getServiceImage = (id) => {
+    let src = "/STP.jpg"
+    if (id === 2) src = "/ETP.jpg"
+    if (id === 3) src = "/ATP.jpg"
 
-  return (
-    <div className="w-full h-40">
-      <img src={src} alt="Service" className="w-full h-full object-cover rounded-t-lg" />
-    </div>
-  )
-}
-
-
+    return (
+      <div className="w-full h-40">
+        <img src={src} alt="Service" className="w-full h-full object-cover rounded-t-lg" />
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-   <section
-  className="relative bg-cover bg-center py-20"
-  style={{ backgroundImage: "url('/projects.jpg')" }}
->
-  <div className="absolute inset-0 bg-black bg-opacity-40"></div> {/* overlay */}
-  
-  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center">
-      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
-        Projects & Services
-      </h1>
-      <p className="text-xl md:text-2xl text-white drop-shadow-lg">
-        Comprehensive wastewater treatment solutions and successful project implementations
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
+      <section
+        className="relative bg-cover bg-center py-20"
+        style={{ backgroundImage: "url('/projects.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div> {/* overlay */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+              Projects & Services
+            </h1>
+            <p className="text-xl md:text-2xl text-white drop-shadow-lg">
+              Comprehensive wastewater treatment solutions and successful project implementations
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Tab Navigation */}
       <section className="py-8 bg-white border-b">
@@ -110,40 +103,26 @@ const ProjectsServices = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {data?.services?.map((service) => (
-                <div key={service.id} className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
-                  <div key={service.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
-  {getServiceImage(service.id)}
+                <div
+                  key={service.id}
+                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+                >
+                  {getServiceImage(service.id)}
 
-  <div className="p-8">
-    <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">{service.title}</h3>
-    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
-    <div className="space-y-2">
-      <h4 className="font-medium text-gray-900">Key Features:</h4>
-      <ul className="space-y-1">
-        {service.features.map((feature, index) => (
-          <li key={index} className="text-gray-600 text-sm flex items-center">
-            <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 text-center">{service.description}</p>
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-gray-900">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="text-gray-600 text-sm flex items-center">
-                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="p-8">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">{service.title}</h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-gray-900">Key Features:</h4>
+                      <ul className="space-y-1">
+                        {service.features.map((feature, index) => (
+                          <li key={index} className="text-gray-600 text-sm flex items-center">
+                            <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               ))}
