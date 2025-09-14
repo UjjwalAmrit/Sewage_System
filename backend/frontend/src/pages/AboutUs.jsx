@@ -89,7 +89,7 @@ const AboutUs = () => {
           {/* Facility Image Section */}
           <div className="relative group">
             <img
-              src="./water-treatment.jpg" // ✅ path fixed
+              src="/water-treatment.jpg" // ✅ path fixed
               alt="Water Treatment Facility"
               className="w-full h-80 object-cover rounded-2xl shadow-xl transform group-hover:scale-105 transition duration-500"
             />
