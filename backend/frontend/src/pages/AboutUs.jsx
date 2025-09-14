@@ -37,7 +37,7 @@ const AboutUs = () => {
       {/* Hero Section */}
 <section
   className="relative text-white py-24 overflow-hidden bg-cover bg-center"
-  style={{ backgroundImage: "url('/about-us.jpg')" }}
+  style={{ backgroundImage: "url('../about-us.jpg')" }} 
 >
   {/* Dark overlay so text is visible */}
   <div className="absolute inset-0 bg-black/50"></div>
