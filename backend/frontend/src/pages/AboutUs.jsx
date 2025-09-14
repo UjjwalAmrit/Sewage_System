@@ -34,25 +34,22 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen font-sans text-gray-900">
       {/* Hero Section */}
-      {/* Hero Section */}
-<section
-  className="relative text-white py-24 overflow-hidden bg-cover bg-center"
-  style={{ backgroundImage: "url('../about-us.jpg')" }} 
->
-  {/* Dark overlay so text is visible */}
-  <div className="absolute inset-0 bg-black/50"></div>
+      <section
+        className="relative text-white py-24 overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: "url('./about-us.jpg')" }} // ✅ path fixed
+      >
+        {/* Dark overlay so text is visible */}
+        <div className="absolute inset-0 bg-black/50"></div>
 
-  <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
-      About Us
-    </h1>
-    <p className="text-xl md:text-2xl font-light">
-      {aboutData?.company?.name}
-    </p>
-  </div>
-</section>
-
-
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
+            About Us
+          </h1>
+          <p className="text-xl md:text-2xl font-light">
+            {aboutData?.company?.name}
+          </p>
+        </div>
+      </section>
 
       {/* Company Info Section */}
       <section className="py-20 bg-gradient-to-b from-white to-blue-50">
@@ -92,7 +89,7 @@ const AboutUs = () => {
           {/* Facility Image Section */}
           <div className="relative group">
             <img
-              src="water-treatment.jpg" // <-- make sure this is in public/images/
+              src="./water-treatment.jpg" // ✅ path fixed
               alt="Water Treatment Facility"
               className="w-full h-80 object-cover rounded-2xl shadow-xl transform group-hover:scale-105 transition duration-500"
             />
