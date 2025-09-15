@@ -36,7 +36,7 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section
         className="relative text-white py-24 overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: "url('/about-us.jpg')" }} // ✅ path fixed
+        style={{ backgroundImage: "url('/images/about-us.jpg')" }} // ✅ path fixed
       >
         {/* Dark overlay so text is visible */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -89,7 +89,7 @@ const AboutUs = () => {
           {/* Facility Image Section */}
           <div className="relative group">
             <img
-              src="/water-treatment.jpg" // ✅ path fixed
+              src="/images/water-treatment.jpg" // ✅ path fixed
               alt="Water Treatment Facility"
               className="w-full h-80 object-cover rounded-2xl shadow-xl transform group-hover:scale-105 transition duration-500"
             />
