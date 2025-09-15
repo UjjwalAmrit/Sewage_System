@@ -49,7 +49,7 @@ const Home = () => {
   return (
     <div className="min-h-screen font-sans">
       {/* Hero Section */}
-    <section className="relative text-white py-20 overflow-hidden bg-[url('/home.jpg')] bg-cover bg-center">
+    <section className="relative text-white py-20 overflow-hidden bg-[url('/images/home.jpg')] bg-cover bg-center">
       {/* Subtle dark overlay for readability */}
       <div className="absolute inset-0 bg-black/40"></div>
 
