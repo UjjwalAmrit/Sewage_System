@@ -41,7 +41,7 @@ const ProjectsServices = () => {
     {
       id: 101,
       title: "High-Efficiency Aeration System",
-      image: "/aeration.jpg", // save as aeration.jpg
+      image: "/images/aeration.jpg", 
       description:
         "Compact aeration engineered for powerful airflow with drastic energy savings. Reliable, quiet, and maintenance-free for demanding industries.",
       features: [
@@ -60,7 +60,7 @@ Model: A24 7.5kW 30kPa HP → 810 m³/h | 7.5kW | 74 dB | 14.8 kg
     {
       id: 102,
       title: "Aerofix Bioreactor Technology",
-      image: "/aerofix.jpg", // save as aerofix.jpg
+      image: "/images/aerofix.jpg", // save as aerofix.jpg
       description:
         "Next-gen fixed-film media for superior wastewater treatment. Retrofit-ready with >95% BOD removal efficiency.",
       features: [
@@ -80,7 +80,7 @@ Applications: STPs, ETPs, rivers, lakes, industrial sites
     {
       id: 103,
       title: "Advanced STP Solutions",
-      image: "/stp-advanced.jpg", // save as stp-advanced.jpg
+      image: "/images/stp-advanced.jpg", // save as stp-advanced.jpg
       description:
         "Compact, efficient, and eco-friendly sewage treatment system delivering odor-free, reusable water at reduced costs.",
       features: [
@@ -95,7 +95,7 @@ Applications: STPs, ETPs, rivers, lakes, industrial sites
     {
       id: 1,
       title: "Sewage Treatment Plant (STP)",
-      image: "/STP.jpg",
+      image: "/images/STP.jpg",
       description:
         "Reliable sewage treatment plants delivering clean, eco-friendly discharge water for communities and industries.",
       features: ["Up to 95% contaminant removal", "Compact design", "Automated operation"],
@@ -103,7 +103,7 @@ Applications: STPs, ETPs, rivers, lakes, industrial sites
     {
       id: 2,
       title: "Effluent Treatment Plant (ETP)",
-      image: "/ETP.jpg",
+      image: "/images/ETP.jpg",
       description:
         "Custom effluent treatment plants designed for industrial wastewater management and regulatory compliance.",
       features: ["Handles complex effluents", "Reduces chemical load", "Cost-effective operations"],
@@ -111,7 +111,7 @@ Applications: STPs, ETPs, rivers, lakes, industrial sites
     {
       id: 3,
       title: "Advanced Treatment Process (ATP)",
-      image: "/ATP.jpg",
+      image: "/images/ATP.jpg",
       description:
         "Cutting-edge advanced treatment processes for industries requiring ultra-pure water and high compliance.",
       features: ["High purification levels", "Meets strict standards", "Energy-efficient designs"],
@@ -123,7 +123,7 @@ Applications: STPs, ETPs, rivers, lakes, industrial sites
       {/* Hero Section */}
       <section
         className="relative bg-cover bg-center py-20"
-        style={{ backgroundImage: "url('/projects.jpg')" }}
+        style={{ backgroundImage: "url('/images/projects.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
