@@ -181,7 +181,7 @@ Applications: STPs, ETPs, rivers, lakes, industrial sites
                   key={service.id}
                   className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
                 >
-                  <div className="w-full h-40">
+                  <div className="w-full h-50">
                     <img
                       src={service.image}
                       alt={service.title}

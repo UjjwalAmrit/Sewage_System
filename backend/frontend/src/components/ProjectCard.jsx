@@ -3,33 +3,33 @@ import { FaCheckCircle, FaClock, FaMapMarkerAlt } from "react-icons/fa"
 const ProjectCard = ({ project }) => {
   const getStatusIcon = (status) => {
     return status === "Completed" ? (
-      <FaCheckCircle className="text-green-400 drop-shadow" />
+      <FaCheckCircle className="text-green-600 drop-shadow" />
     ) : (
-      <FaClock className="text-yellow-400 drop-shadow" />
+      <FaClock className="text-yellow-600 drop-shadow" />
     )
   }
 
   const getStatusColor = (status) => {
     return status === "Completed"
-      ? "bg-green-500/20 text-green-300 border border-green-400/30"
-      : "bg-yellow-500/20 text-yellow-300 border border-yellow-400/30"
+      ? "bg-green-700/30 text-green-500 border border-green-500/30"
+      : "bg-yellow-700/30 text-yellow-500 border border-yellow-500/30"
   }
 
   return (
-    <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg p-6 border border-white/20 hover:shadow-purple-500/30 hover:scale-[1.02] transition-all">
+    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200 hover:shadow-purple-300 hover:scale-[1.02] transition-all">
       {/* Title */}
-      <h3 className="text-xl font-semibold text-purple-200 mb-3">{project.name}</h3>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{project.name}</h3>
 
       {/* Location */}
-      <div className="flex items-center space-x-2 text-gray-300 mb-3">
+      <div className="flex items-center space-x-2 text-gray-600 mb-3">
         <FaMapMarkerAlt className="text-purple-400" />
         <span>{project.location}</span>
       </div>
 
       {/* Capacity */}
       <div className="mb-4">
-        <span className="text-sm text-gray-400">Capacity: </span>
-        <span className="font-medium text-white">{project.capacity}</span>
+        <span className="text-sm text-gray-500">Capacity: </span>
+        <span className="font-medium text-gray-900">{project.capacity}</span>
       </div>
 
       {/* Status */}

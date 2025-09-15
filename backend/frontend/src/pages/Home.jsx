@@ -73,7 +73,7 @@ const Home = () => {
             </a>
             <a
               href="/contact-us"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors shadow-md hover:shadow-lg"
+              className="border-2 bg-green-500 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors shadow-md hover:shadow-lg"
             >
               Get Quote
             </a>
