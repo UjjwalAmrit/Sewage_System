@@ -162,6 +162,69 @@ Applications: STPs, ETPs, rivers, lakes, industrial wastewater
           </div>
         </div>
       </section>
+
+      {/* Electro-Induction Reactor Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <img
+              src="/images/tender.jpg"
+              alt="Electro-Induction Reactor"
+              className="rounded-xl shadow-lg w-full object-cover"
+            />
+          </div>
+
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Electro-Induction Reactor
+            </h2>
+
+            <p className="text-lg text-gray-700 mb-4">
+              <span className="font-semibold">Our Technology:</span> Electro-Induction
+              Reactor Treatment Systems
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Why Choose Electro-Induction?
+            </h3>
+
+            <p className="text-gray-600 mb-4">
+              The <span className="font-semibold">ELECTRON Reactor</span> saves both
+              <span className="font-semibold"> CAPEX and OPEX</span> with minimal human
+              interference, offering a next-generation solution to challenges faced
+              by conventional water and wastewater treatment systems.
+            </p>
+
+            <p className="text-gray-600 mb-6">
+              Our reactors deliver <span className="font-semibold">unparalleled performance</span>,
+              converting complex wastewater into reusable resources while meeting
+              stringent environmental regulations—moving towards a
+              <span className="font-semibold"> net-zero water ecosystem</span>.
+            </p>
+
+            <ul className="space-y-2">
+              <li className="flex items-center text-gray-700">
+                <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                Reduced CAPEX & OPEX
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                Minimal human intervention
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                High regulatory compliance
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                Ideal for industrial & municipal wastewater
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
     </div>
   )
 }
