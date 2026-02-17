@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/contact", contactRoutes);
 app.use("/api/home", homeRoutes);
 app.use("/api/about", aboutRoutes);
-app.use("/api/products", projectServiceRoutes);
+app.use("/api/projects-&-services", projectServiceRoutes);
 
 
 app.get("/api/health", (req, res) => {
