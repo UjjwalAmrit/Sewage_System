@@ -45,7 +45,7 @@ export const getAboutContent = async () => {
 };
 
 export const getProjectsServices = async () => {
-  const response = await api.get("/products");
+  const response = await api.get("/projects-&-services");
   return response.data.data;
 };
 
