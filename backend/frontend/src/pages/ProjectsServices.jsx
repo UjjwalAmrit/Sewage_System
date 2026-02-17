@@ -97,6 +97,82 @@ Treatment: Physico-chemical + biological
 Discharge: ZLD / compliant discharge
       `,
     },
+    {
+      id: 3,
+      title: "Integrated Fixed Film Activated Sludge Media ",
+      image: "/images/ETP.jpg",
+      description:
+        "IFAS (Integrated Fixed Film Activated Sludge) is an advanced biological treatment technology that combines attached growth and suspended growth processes within a single reactor. The media remains fixed inside the tank, allowing stable biofilm formation along with suspended biomass.",
+      features: [
+        "Media Type: String Type – Fixed",
+
+        "Material: High-grade textile fabric",
+
+        "Specific Surface Area: 3200 m²/m³",
+
+        "Installation: SS 304 cage structure",
+
+        "Long service life with no media loss",
+
+        "Can effectively replace conventional MBBR media",
+
+        "This configuration enables simultaneous nitrification and denitrification, supporting biological nitrogen and phosphorus removal with high process stability.",
+      ],
+      more: `
+      Performance Results in STP Plants:
+
+      BOD reduced to <10 mg/L
+
+      COD reduced to <50 mg/L
+
+      Ammonia reduced to <1 mg/L
+
+      Improved nitrogen removal efficiency
+
+      Reduced sludge generation
+
+      Lower aeration energy compared to MBBR
+
+      This makes IFAS ideal for STP upgradation, retrofitting, CPCB compliance, space-constrained projects, and performance enhancement without additional civil work. 
+      `,
+    },
+    {
+      id: 4,
+      title: "Membrane Bioreactor (MBR)",
+      image: "/images/ETP.jpg",
+      description:
+        "MBR (Membrane Bioreactor) is an advanced wastewater treatment technology that integrates biological treatment with membrane filtration. It replaces conventional secondary clarifiers and tertiary filtration systems, delivering superior effluent quality suitable for reuse applications.",
+      features: [
+       "Combines activated sludge process with membrane filtration",
+
+        "Produces crystal-clear, pathogen-free treated water",
+
+        "Compact footprint – ideal for space-restricted sites",
+
+        "Eliminates the need for secondary clarifiers and sand filters",
+
+        "Consistent outlet quality regardless of load variation",
+      ],
+      more: `
+    Typical Outlet Parameters:
+
+    BOD: <5 mg/L
+
+    COD: <30 mg/L
+
+    TSS: <2 mg/L
+
+    Turbidity: <1 NTU
+
+    Applications:
+
+    STP plants for residential, commercial & industrial projects
+
+    Treated water reuse for flushing, gardening & cooling
+
+    CPCB / stringent discharge compliance projects
+      `,
+    },
   ]
 
   return (
