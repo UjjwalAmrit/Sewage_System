@@ -139,7 +139,7 @@ Discharge: ZLD / compliant discharge
     {
       id: 4,
       title: "Membrane Bioreactor (MBR)",
-      image: "/images/ETP.jpg",
+      image: "/images/bioreactor.jpeg",
       description:
         "MBR (Membrane Bioreactor) is an advanced wastewater treatment technology that integrates biological treatment with membrane filtration. It replaces conventional secondary clarifiers and tertiary filtration systems, delivering superior effluent quality suitable for reuse applications.",
       features: [
