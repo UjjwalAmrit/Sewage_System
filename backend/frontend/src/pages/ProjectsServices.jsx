@@ -26,7 +26,7 @@ Model: A24 7.5kW 30kPa HP → 810 m³/h | 7.5kW | 74 dB | 14.8 kg
     },
     {
       id: 102,
-      title: "Aerofix Bioreactor Technology",
+      title: "Screw Press",
       image: "/images/aerofix.jpg",
       description:
         "Next-gen fixed-film media for superior wastewater treatment. Retrofit-ready with >95% BOD removal efficiency.",
