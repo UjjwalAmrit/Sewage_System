@@ -33,13 +33,13 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <FaWater className="text-2xl text-purple-300 drop-shadow" />
-            <span className="text-xl font-bold tracking-wide text-white">Aabhar</span>
+            <span className="text-xl font-bold tracking-wide text-white">Shuddaqua</span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              {["Home", "About Us", "Projects & Services", "Contact Us"].map((item) => (
+              {["Home", "About Us", "Products", "Contact Us"].map((item) => (
                 <Link
                   key={item}
                   to={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
