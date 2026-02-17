@@ -25,8 +25,8 @@ const getHomeContent = async (req, res) => {
         },
       ],
       technologies: [
-        "Aerofix BioReactor Technology",
-        "DiscFlow Optimizer System",
+        "Screw Press",
+        "IFAS Product",
         "Eco Haven Solutions",
         "Advanced Biological Treatment",
       ],
