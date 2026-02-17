@@ -20,6 +20,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const navItems = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about-us" },
+  { name: "Products", path: "/projects-&-services" },
+  { name: "Contact Us", path: "/contact-us" },
+];
+
+
   return (
     <nav
       className={`sticky top-0 w-full z-50 transition-all duration-300 
@@ -39,14 +47,13 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              {["Home", "About Us", "Products", "Contact Us"].map((item) => (
+              {navItems.map((item) => (
                 <Link
-                  key={item}
-                  to={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  key={item.name}
+                  to={item.path}
                   className="relative text-sm font-medium text-white/80 hover:text-purple-200 transition-colors group"
                 >
-                  {item}
-                  {/* Underline animation */}
+                  {item.name}
                   <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full" />
                 </Link>
               ))}
