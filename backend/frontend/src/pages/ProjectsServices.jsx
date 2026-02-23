@@ -27,7 +27,7 @@ Model: A24 7.5kW 30kPa HP → 810 m³/h | 7.5kW | 74 dB | 14.8 kg
     {
       id: 102,
       title: "Screw Press",
-      image: "/images/aerofix.jpg",
+      image: "/images/screw_press.jpeg",
       description:
         "Next-gen fixed-film media for superior wastewater treatment. Retrofit-ready with >95% BOD removal efficiency.",
       features: [
@@ -100,7 +100,7 @@ Discharge: ZLD / compliant discharge
     {
       id: 3,
       title: "Integrated Fixed Film Activated Sludge Media ",
-      image: "/images/ETP.jpg",
+      image: "/images/ifas.jpeg",
       description:
         "IFAS (Integrated Fixed Film Activated Sludge) is an advanced biological treatment technology that combines attached growth and suspended growth processes within a single reactor. The media remains fixed inside the tank, allowing stable biofilm formation along with suspended biomass.",
       features: [
