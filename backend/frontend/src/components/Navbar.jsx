@@ -41,7 +41,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <FaWater className="text-2xl text-purple-300 drop-shadow" />
-            <span className="text-xl font-bold tracking-wide text-white">Shuddaqua</span>
+            <span className="text-xl font-bold tracking-wide text-white">Shuddhaqua</span>
           </div>
 
           {/* Desktop Menu */}
