@@ -46,7 +46,7 @@ const AboutUs = () => {
             About Us
           </h1>
           <p className="text-xl md:text-2xl font-light">
-            {Shuddhaqua Ltd.}
+            Shuddhaqua.Ltd.
           </p>
         </div>
       </section>
